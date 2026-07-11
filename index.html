@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOFORUM Voter Support - Moses Nhlapo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-red: #8B0000;
@@ -16,9 +16,9 @@
        
         body {
             font-family: 'Poppins', sans-serif;
-            background: #F8F5F0; /* Warm off-white - best match */
+            background: #F8F5F0;
             color: #333;
-            line-height: 1.5;
+            line-height: 1.6;
         }
        
         .header {
@@ -28,8 +28,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: relative;
-            overflow: hidden;
+            flex-wrap: wrap;
+            gap: 10px;
         }
        
         .logo-container {
@@ -39,7 +39,7 @@
         }
        
         .logo-text {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             letter-spacing: -1px;
         }
@@ -52,28 +52,19 @@
             margin: 0 auto;
             padding: 20px;
             display: grid;
-            grid-template-columns: 1fr 420px 320px;
+            grid-template-columns: 1fr 460px 320px;
             gap: 25px;
             align-items: start;
         }
        
-        .left-column { position: relative; }
-       
-        .portrait {
-            width: 100%;
-            max-width: 380px;
+        .welcome-note {
+            background: white;
             border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-            border: 8px solid white;
-        }
-       
-        .registration-box {
-            background: #1A2A44;
-            color: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 25px;
-            text-align: center;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-left: 6px solid #8B0000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            font-size: 15.5px;
         }
        
         .form-container {
@@ -90,9 +81,10 @@
             text-align: center;
         }
        
-        .tally-container {
-            padding: 0;
-            min-height: 700px;
+        .tally-container iframe {
+            width: 100%;
+            min-height: 680px;
+            border: none;
         }
        
         .right-column {
@@ -110,31 +102,69 @@
             margin: 15px 0;
         }
        
-        .ward {
-            background: #FFB300;
-            color: #1A2A44;
-            font-weight: 700;
-            padding: 8px 20px;
-            border-radius: 50px;
-            display: inline-block;
-            font-size: 22px;
-            margin: 15px 0;
-        }
-       
-        .bottom-section {
-            grid-column: 1 / -1;
-            background: white;
+        .portrait {
+            width: 100%;
             border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
         }
-       
-        .disclaimer {
-            font-size: 12.5px;
-            color: #555;
-            text-align: center;
-            margin-top: 15px;
+
+        /* ===================== RESPONSIVE DESIGN ===================== */
+        @media (max-width: 1024px) {
+            .main-container {
+                grid-template-columns: 1fr 420px;
+            }
+            .right-column {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 20px;
+            }
+            
+            .header {
+                text-align: center;
+                padding: 12px 15px;
+            }
+            
+            .logo-text {
+                font-size: 22px;
+            }
+            
+            .welcome-note {
+                padding: 18px;
+                font-size: 15px;
+            }
+            
+            .form-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .tally-container iframe {
+                min-height: 620px;
+            }
+            
+            .candidate-name {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .tally-container iframe {
+                min-height: 580px;
+            }
+            
+            .welcome-note {
+                padding: 16px;
+            }
         }
     </style>
 </head>
@@ -142,15 +172,11 @@
     <!-- HEADER -->
     <div class="header">
         <div class="logo-container">
-            <div style="width: 60px; height: 60px; background: linear-gradient(#FFB300, #FF8C00); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #1A2A44; font-weight: 700;">🇿🇦</div>
+            <div style="width: 55px; height: 55px; background: linear-gradient(#FFB300, #FF8C00); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; color: #1A2A44; font-weight: 700;">🇿🇦</div>
             <div>
                 <div class="logo-text"><span class="eco">ECO</span><span class="forum">FORUM</span></div>
-                <div style="font-size: 13px; letter-spacing: 2px;">LOCALIZATION</div>
+                <div style="font-size: 12px; letter-spacing: 2px;">LOCALIZATION</div>
             </div>
-        </div>
-        <div style="text-align: center;">
-            <div style="font-size: 18px; font-weight: 600;">FINAL REGISTRATION WEEK</div>
-            <div style="font-size: 15px;">01 - 02 AUGUST 2026</div>
         </div>
     </div>
 
@@ -158,35 +184,30 @@
         <!-- LEFT COLUMN -->
         <div class="left-column">
             <img src="campaign.jpg" alt="Cnde. Moses Nhlapo" class="portrait">
-           
-            <div class="registration-box">
-                <div class="title">FINAL REGISTRATION WEEK</div>
-                <div style="font-size: 28px; font-weight: 700; margin: 10px 0;">01-02 AUGUST 2026</div>
-                <div style="margin-top: 15px;">
-                    <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 30px;">🕒 8am - 5pm</span>
-                </div>
-                <div style="margin-top: 20px; background: white; color: #1A2A44; font-weight: 700; padding: 12px; border-radius: 8px; font-size: 18px;">
-                    VOTE <span style="color: #8B0000;">×</span> ECOFORUM
-                </div>
-            </div>
         </div>
 
-        <!-- CENTER - TALLY FORM -->
-        <div class="form-container">
-            <div class="form-header">
-                <h1>ECOFORUM VOTER SUPPORT</h1>
-                <div style="font-size: 15px;">ECD Forum Initiative</div>
+        <!-- CENTER COLUMN -->
+        <div>
+            <!-- Welcome Note -->
+            <div class="welcome-note">
+                <strong>FINAL REGISTRATION WEEK</strong><br>
+                <strong>Date:</strong> 1 - 2 August 2026 &nbsp; | &nbsp; <strong>Time:</strong> 8am - 5pm<br><br>
+                Join us in supporting <strong>Cnde. Moses Nhlapo</strong> for Ward 101 and Early Childhood Development.
             </div>
-           
-            <div class="tally-container">
-                <iframe src="https://tally.so/embed/aQge1q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-                        width="100%" 
-                        height="750" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        title="ECOFORUM Voter Support">
-                </iframe>
+
+            <!-- Tally Form -->
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>ECOFORUM VOTER SUPPORT</h1>
+                </div>
+                <div class="tally-container">
+                    <iframe src="https://tally.so/embed/aQge1q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                            width="100%" 
+                            height="750" 
+                            frameborder="0" 
+                            title="ECOFORUM Voter Support">
+                    </iframe>
+                </div>
             </div>
         </div>
 
@@ -197,20 +218,13 @@
             <div style="height: 4px; background: #FFB300; width: 120px; margin: 15px auto;"></div>
             <div style="font-weight: 600;">Ward Councillor Candidate</div>
             <div style="margin: 20px 0 10px; font-size: 15px;">City of Ekurhuleni Municipality</div>
-            <div class="ward">WARD 101</div>
+            <div class="ward" style="background: #FFB300; color: #1A2A44; font-weight: 700; padding: 8px 20px; border-radius: 50px; display: inline-block; font-size: 22px;">WARD 101</div>
         </div>
     </div>
 
-    <!-- BOTTOM SECTION -->
-    <div class="bottom-section">
-        <div style="margin: 20px 0;">
-            <strong>Mobile Friendly • Secure • Supports ECD</strong>
-        </div>
-        <div class="disclaimer">
-            Your information is collected in accordance with the Protection of Personal Information Act (POPIA). 
-            It will only be used for this campaign.
-        </div>
+    <!-- BOTTOM -->
+    <div style="text-align:center; padding: 30px 20px; color:#555; font-size:14px; background:#fff; margin-top: 20px;">
+        Mobile Friendly • Secure • POPIA Compliant
     </div>
-
 </body>
 </html>
