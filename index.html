@@ -11,16 +11,16 @@
             --accent-yellow: #FFB300;
             --dark-blue: #1A2A44;
         }
-        
+       
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+       
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: #F8F5F0; /* Warm off-white - best match */
             color: #333;
             line-height: 1.5;
         }
-        
+       
         .header {
             background: linear-gradient(90deg, #1A2A44, #2C4A6E);
             color: white;
@@ -31,22 +31,22 @@
             position: relative;
             overflow: hidden;
         }
-        
+       
         .logo-container {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        
+       
         .logo-text {
             font-size: 28px;
             font-weight: 700;
             letter-spacing: -1px;
         }
-        
+       
         .eco { color: #FFB300; }
         .forum { color: #fff; }
-        
+       
         .main-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -56,9 +56,9 @@
             gap: 25px;
             align-items: start;
         }
-        
+       
         .left-column { position: relative; }
-        
+       
         .portrait {
             width: 100%;
             max-width: 380px;
@@ -66,7 +66,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.25);
             border: 8px solid white;
         }
-        
+       
         .registration-box {
             background: #1A2A44;
             color: white;
@@ -75,85 +75,26 @@
             margin-top: 25px;
             text-align: center;
         }
-        
+       
         .form-container {
             background: white;
             border-radius: 16px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.15);
             overflow: hidden;
         }
-        
+       
         .form-header {
             background: linear-gradient(90deg, #8B0000, #B22222);
             color: white;
             padding: 20px;
             text-align: center;
         }
-        
-        .form-body { padding: 25px; }
-        
-        .form-group {
-            margin-bottom: 18px;
+       
+        .tally-container {
+            padding: 0;
+            min-height: 700px;
         }
-        
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 6px;
-            font-size: 14px;
-            color: #1A2A44;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 15px;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #8B0000;
-            outline: none;
-            box-shadow: 0 0 0 4px rgba(139, 0, 0, 0.15);
-        }
-        
-        .consent {
-            margin: 20px 0;
-            padding: 18px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 5px solid #8B0000;
-        }
-        
-        .consent label {
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            line-height: 1.5;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            background: linear-gradient(90deg, #8B0000, #B22222);
-            color: white;
-            border: none;
-            padding: 16px;
-            font-size: 18px;
-            font-weight: 700;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: all 0.3s;
-        }
-        
-        .submit-btn:hover { transform: translateY(-3px); }
-        .submit-btn:disabled { background: #999; cursor: not-allowed; }
-        
+       
         .right-column {
             background: #8B0000;
             color: white;
@@ -161,14 +102,14 @@
             padding: 25px 20px;
             text-align: center;
         }
-        
+       
         .candidate-name {
             font-size: 32px;
             font-weight: 700;
             line-height: 1.1;
             margin: 15px 0;
         }
-        
+       
         .ward {
             background: #FFB300;
             color: #1A2A44;
@@ -179,26 +120,21 @@
             font-size: 22px;
             margin: 15px 0;
         }
-        
+       
         .bottom-section {
             grid-column: 1 / -1;
             background: white;
             border-radius: 12px;
             padding: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
         }
-        
+       
         .disclaimer {
             font-size: 12.5px;
             color: #555;
             text-align: center;
             margin-top: 15px;
-        }
-        
-        .privacy-link {
-            color: #8B0000;
-            text-decoration: underline;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -222,7 +158,7 @@
         <!-- LEFT COLUMN -->
         <div class="left-column">
             <img src="campaign.jpg" alt="Cnde. Moses Nhlapo" class="portrait">
-            
+           
             <div class="registration-box">
                 <div class="title">FINAL REGISTRATION WEEK</div>
                 <div style="font-size: 28px; font-weight: 700; margin: 10px 0;">01-02 AUGUST 2026</div>
@@ -235,67 +171,22 @@
             </div>
         </div>
 
-        <!-- CENTER FORM -->
+        <!-- CENTER - TALLY FORM -->
         <div class="form-container">
             <div class="form-header">
                 <h1>ECOFORUM VOTER SUPPORT</h1>
                 <div style="font-size: 15px;">ECD Forum Initiative</div>
             </div>
-            
-            <div class="form-body">
-                <p><strong>ECD Forum</strong> advocates for Early Childhood Development. We raise awareness and promote quality ECD as a vital sector for future generations.</p>
-                
-                <p>Join us in supporting Cnde. Moses Nhlapo and building a better future for every child.</p>
-                
-                <div style="background: #f8f9fa; padding: 12px; border-radius: 8px; margin: 20px 0; font-size: 14px;">
-                    <strong>Date:</strong> 1 - 2 August 2026
-                </div>
-                
-                <div style="color: #8B0000; text-align: center; font-size: 13px; margin: 15px 0;">
-                    #ECDMatters #VoteECOFORUM #SupportPreschools #BuildingTheFutureTogether
-                </div>
-                
-                <form action="YOUR_GOOGLE_FORM_LINK_HERE" method="POST" id="supportForm">
-                    <div class="form-group">
-                        <label>Surname <span style="color:#8B0000">*</span></label>
-                        <input type="text" name="surname" required placeholder="Enter your surname">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Full Name(s) <span style="color:#8B0000">*</span></label>
-                        <input type="text" name="full_names" required placeholder="Enter your full name(s)">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>ID Number <span style="color:#8B0000">*</span></label>
-                        <input type="text" name="id_number" required placeholder="Enter your ID number">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Physical Address <span style="color:#8B0000">*</span></label>
-                        <textarea name="physical_address" rows="3" required placeholder="Enter your physical address"></textarea>
-                    </div>
-                    
-                    <!-- Improved Consent -->
-                    <div class="consent">
-                        <label>
-                            <input type="checkbox" id="consent" required style="margin-top: 4px; width: 18px; height: 18px; accent-color: #8B0000;">
-                            <span>
-                                I am 18 years or older and I <strong>voluntarily consent</strong> to the collection and processing of my personal information by the ECOFORUM Campaign for Cnde. Moses Nhlapo (Ward 101). 
-                                I have read and agree to the <span class="privacy-link" onclick="showPrivacy()">Privacy Notice</span>.
-                            </span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn" id="submitBtn" disabled>
-                        🚀 SUBMIT SUPPORT
-                    </button>
-                </form>
-                
-                <div class="disclaimer">
-                    Your information is collected in accordance with the Protection of Personal Information Act (POPIA). 
-                    It will only be used for this campaign and will not be sold or shared unlawfully.
-                </div>
+           
+            <div class="tally-container">
+                <iframe src="https://tally.so/embed/aQge1q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                        width="100%" 
+                        height="750" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        title="ECOFORUM Voter Support">
+                </iframe>
             </div>
         </div>
 
@@ -312,44 +203,14 @@
 
     <!-- BOTTOM SECTION -->
     <div class="bottom-section">
-        <div style="text-align:center; margin: 20px 0;">
+        <div style="margin: 20px 0;">
             <strong>Mobile Friendly • Secure • Supports ECD</strong>
         </div>
-    </div>
-
-    <!-- Simple Privacy Notice Modal -->
-    <div id="privacyModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
-        <div style="background:white; max-width:600px; margin:20px; padding:25px; border-radius:12px; max-height:90vh; overflow-y:auto;">
-            <h2 style="color:#8B0000; margin-bottom:15px;">Privacy Notice</h2>
-            <p><strong>ECOFORUM Voter Support Campaign</strong></p>
-            <p>We collect your personal information (name, ID number, address) solely to record your voluntary support for Cnde. Moses Nhlapo, Ward 101 Councillor Candidate.</p>
-            <p>Your data will be stored securely and used only for campaign purposes. You have the right to access, correct, or request deletion of your information at any time.</p>
-            <p>By submitting this form you confirm your consent under the Protection of Personal Information Act (POPIA).</p>
-            <button onclick="hidePrivacy()" style="margin-top:20px; padding:12px 25px; background:#8B0000; color:white; border:none; border-radius:8px; cursor:pointer;">Close</button>
+        <div class="disclaimer">
+            Your information is collected in accordance with the Protection of Personal Information Act (POPIA). 
+            It will only be used for this campaign.
         </div>
     </div>
 
-    <script>
-        const consent = document.getElementById('consent');
-        const submitBtn = document.getElementById('submitBtn');
-        const modal = document.getElementById('privacyModal');
-
-        consent.addEventListener('change', () => {
-            submitBtn.disabled = !consent.checked;
-        });
-
-        function showPrivacy() {
-            modal.style.display = 'flex';
-        }
-        
-        function hidePrivacy() {
-            modal.style.display = 'none';
-        }
-
-        // Close modal when clicking outside
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) hidePrivacy();
-        });
-    </script>
 </body>
 </html>
